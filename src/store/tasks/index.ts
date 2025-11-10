@@ -43,6 +43,8 @@ const useTasksStore = create<State & Actions>((set, get) => ({
 	updateTask: (task: Task, listId: string) => {},
 
 	moveTask: (task: Task, fromListId: string, toListId: string) => {
+		if (fromListId === toListId) return;
+
 		let fromList = get().tasks.find((list) => list.id === fromListId);
 		let toList = get().tasks.find((list) => list.id === toListId);
 		const state = get().tasks;

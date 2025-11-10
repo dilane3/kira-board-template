@@ -34,8 +34,8 @@ export default function TaskItem({ data }: Props) {
 			{...listeners}
 			{...attributes}
 			className={cn(
-				"w-full rounded-lg p-2 bg-background border min-h-[100px]",
-				isDragging && "opacity-80 rotate-6 cursor-grabbing"
+				"w-full rounded-lg p-2 bg-background border min-h-[100px] cursor-grab",
+				isDragging && "scale-95 cursor-grabbing"
 			)}
 			style={style}
 		>
